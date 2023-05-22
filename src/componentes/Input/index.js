@@ -1,15 +1,15 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const Input = styled.input`
     order: 1px solid #FFF;
     background: transparent;
-    botder: 1px solid #FFF;
+    border: 1px solid #FFF;
     padding: 20px 140px;
     border-radius: 50px;
     width: 200px;
     color: #FFF;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 
     &::placeholder {
         color: #FFF;
@@ -17,4 +17,4 @@ const Input = styled.input`
     }
 `
 
-export default Input;
+export default Input

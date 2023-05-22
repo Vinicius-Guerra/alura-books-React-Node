@@ -1,13 +1,6 @@
-import styled from 'styled-components';
-
-const textoOpcoes = ['Categorias', 'Favoritos', 'Minha Estante'];
-
-const Opcoes = styled.ul`
-    display: flex;
-`
+import styled from 'styled-components'
 
 const Opcao = styled.li`
-    min-width: 120px;
     font-size: 16px;
     display: flex;
     justify-content: center;
@@ -16,17 +9,23 @@ const Opcao = styled.li`
     height: 100%;
     padding: 0 5px;
     cursor: pointer;
-    text-transform: uppercase;
+    min-width: 120px;
 `
 
+const Opcoes = styled.ul`
+    display: flex;
+`
+
+const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
+
 function OpcoesHeader() {
-    return  (
+    return (
         <Opcoes>
             { textoOpcoes.map( (texto) => (
                 <Opcao><p>{texto}</p></Opcao>
-             ) ) }
-        </Opcoes>
+            ) ) }
+      </Opcoes>
     )
 }
 
-export default OpcoesHeader;
+export default OpcoesHeader

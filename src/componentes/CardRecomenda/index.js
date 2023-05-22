@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Titulo } from "../Titulo";
+import styled from "styled-components"
+import { Titulo } from "../Titulo"
 
 const Card = styled.div`
     align-items: center;
@@ -9,9 +9,9 @@ const Card = styled.div`
     display: flex;
     margin: 0 auto;
     max-width: 600px;
-    padding: 26px 20px;
+    padding: 25px 20px;
     justify-content: space-around;
-    width: 100%;
+    width: 100%;  
 `
 
 const Botao = styled.button`
@@ -20,15 +20,23 @@ const Botao = styled.button`
     padding: 10px 0px;
     font-size: 16px;
     border: none;
-    font-weigth: 900;
-    display: blocl;
+    font-weight: 900;
+    display: block;
     text-align: center;
     width: 150px;
+
+    &:hover {
+        cursor: pointer;
+    }
+`
+
+const Descricao = styled.p`
+    max-width: 300px;
 `
 
 const Subtitulo = styled.h4`
     color: #002F52;
-    font-size: 10px;
+    font-size: 18px;
     font-weight: bold;
     margin: 15px 0;
 `
@@ -37,11 +45,7 @@ const ImgLivro = styled.img`
     width: 150px;
 `
 
-const Descricao = styled.p`
-    max-width: 300px;
-`
-
-function CardRecomenda([titulo, subtitulo, descricao, img]) {
+function CardRecomenda({titulo, subtitulo, descricao, img}) {
     return (
         <Card>
             <div>
@@ -50,11 +54,11 @@ function CardRecomenda([titulo, subtitulo, descricao, img]) {
                 <Descricao>{descricao}</Descricao>
             </div>
             <div>
-                 <ImgLivro src={img}/>
+                <ImgLivro src={img}/>
                 <Botao>Saiba mais</Botao>
             </div>
-        </Card>
+        </Card>  
     )
 }
 
-export default CardRecomenda;
+export default CardRecomenda
