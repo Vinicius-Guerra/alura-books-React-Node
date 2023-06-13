@@ -11,22 +11,21 @@ const Opcao = styled.li`
     padding: 0 5px;
     cursor: pointer;
     min-width: 120px;
-    text-transform: uppercase;
 `
 
 const Opcoes = styled.ul`
     display: flex;
 `
 
-const textoOpcoes = ['categorias', 'favoritos', 'minha estante'] 
+const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'ESTANTE']
 
 function OpcoesHeader() {
     return (
         <Opcoes>
             { textoOpcoes.map( (texto) => (
-                <Link to={`/${texto}`}><Opcao><p>{texto}</p></Opcao></Link>
+                <Link to={`/${texto.toLowerCase()}`} ><Opcao><p>{texto}</p></Opcao></Link>
             ) ) }
-        </Opcoes>
+      </Opcoes>
     )
 }
 
