@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { getLivros } from '../../servicos/livros'
-import { postFavorito } from '../../servicos/favoritos'
+import { deleteFavorito, postFavorito } from '../../servicos/favoritos'
 
 
 const PesquisaContainer = styled.section`
@@ -65,6 +65,11 @@ function Pesquisa() {
         await postFavorito(id)
         alert(`Livro de id: ${id} inserido.`)
     }
+
+    // async function deletarFavorito(id) {
+    //     await deleteFavorito(id)
+    //     alert(`Livro de id: ${id} deletado.`)
+    // }
 
     return (
         <PesquisaContainer>
